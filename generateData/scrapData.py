@@ -27,7 +27,7 @@ class ScrapData(webdriver.Chrome):
 
     def openEvents(self):
         eventLink = self.find_element(By.CSS_SELECTOR, "a[href='events.php']")
-        print(eventLink)
+        # print(eventLink)
         # for elem in eventLink:
         #     if elem.get_attribute('innerHTML').strip() == 'View More':
         #         print('Button')
