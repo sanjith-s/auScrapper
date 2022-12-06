@@ -13,10 +13,11 @@ class ScrapData(webdriver.Chrome):
         self.teardown = teardown
         os.environ['PATH'] += self.driver_path
         options = webdriver.ChromeOptions()
+        options.add_argument('--headless')
         options.add_experimental_option('excludeSwitches', ['enable-logging'])
         super(ScrapData, self).__init__(options=options)
         self.implicitly_wait(15)
-        self.maximize_window()
+        # self.maximize_window()
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         if self.teardown:
@@ -85,8 +86,11 @@ class ScrapData(webdriver.Chrome):
             row.append(linkVal)
             content.append(row)
 
-        table = PrettyTable(
-            field_names=fieldNames
-        )
-        table.add_rows(content)
-        print(table)
+        # table = PrettyTable(
+        #     field_names=fieldNames
+        # )
+        # table.add_rows(content)
+        # print(table)
+
+        data = [fieldNames, content]
+        return data
