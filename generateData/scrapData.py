@@ -56,6 +56,7 @@ class ScrapData(webdriver.Chrome):
         contentRows = content.find_elements(By.TAG_NAME, 'tr')
 
         content = []
+        content.append(fieldNames)
         for row in contentRows:
             rowFields = row.find_elements(By.TAG_NAME, 'td')
             row = []
@@ -92,5 +93,4 @@ class ScrapData(webdriver.Chrome):
         # table.add_rows(content)
         # print(table)
 
-        data = [fieldNames, content]
-        return data
+        return content
