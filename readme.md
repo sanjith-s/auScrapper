@@ -4,7 +4,7 @@ Steps to run the project:
  >>pip install -m requirement.txt
  
 2. Install uvicorn
->>Pip install uvicorn
+>>pip install uvicorn
 
 3. Check your chrome version and download the corresponding driver from [here](https://chromedriver.storage.googleapis.com/index.html)
 
