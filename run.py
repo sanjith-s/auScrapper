@@ -10,8 +10,8 @@ def scrapData():
             bot.openEvents()
             res = bot.getNewsData()
             # time.sleep(1000)
-            print("Exiting")
-            print(res)
+            # print("Exiting")
+            # print(res)
             return res
 
     except Exception as e:
